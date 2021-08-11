@@ -5,11 +5,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root {
+    --cor-destaque: #fcc91c;
+}
+
 body {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     background-image: url(img/background\ -\ IMC.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,8 +22,151 @@ body {
     height: 100vh;
 }
 
-/* header h1 {}
+body header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 
-main .categorias table thead tr th {
-    background-color: yellow;
-} */
+body header h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+body main {
+    display: flex;
+    flex-grow: 1;
+}
+
+body main section {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+body main .categorias table {
+    font-size: 1.5rem;
+    border-spacing: 5px;
+}
+
+body main .categorias table thead tr th {
+    background-color: var(--cor-destaque);
+    height: 50px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+body main .categorias table tbody tr td {
+    background-color: var(--cor-destaque);
+    height: 50px;
+    width: 250px;
+    border-radius: 5px;
+    padding-left: 25px;
+    font-weight: 300;
+}
+
+body main .calculadora form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+}
+
+body main .calculadora form .campo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+body main .calculadora form .unidade::before {
+    content: attr(data-unidade);
+    background-color: var(--cor-destaque);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 5px 5px 0px;
+}
+
+body main .calculadora form .unidade input{
+    padding-right: 50px;
+}
+
+body main .calculadora form label {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+body main .calculadora form input {
+    height: 40px;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+    padding: 0 10px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+body main .calculadora form button {
+    height: 50px;
+    background-color: var(--cor-destaque);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+body main .calculadora form button:hover {
+    background-color: #c49000;
+}
+
+body main .calculadora form .resultado {
+    height: 100%;
+    background-color: var(--cor-destaque);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+body footer {
+    height: 40px;
+    text-align: center;
+}
+
+body footer span {
+    color: white;
+    font-size: .9rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    body main .categorias {
+        display: none;
+    }
+
+    body header h1 {
+        font-size: 2rem;
+    }
+
+    body main .calculadora form {
+        width: 80%;
+    }
+
+    body main .calculadora form .unidade input{
+        padding-right: 70px;
+    }
+}
