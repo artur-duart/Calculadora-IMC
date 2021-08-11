@@ -2,4 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
+
+body {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    background-image: url(img/background\ -\ IMC.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #0009;
+    background-blend-mode: darken;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* header h1 {}
+
+main .categorias table thead tr th {
+    background-color: yellow;
+} */
