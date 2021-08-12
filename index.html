@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>IMC</title>
 </head>
 
@@ -60,20 +61,20 @@
             <form>
                 <div class="campo">
                     <label>Nome:</label>
-                    <input type="text">
+                    <input type="text" id="nome">
                 </div>
 
                 <div class="campo unidade" data-unidade="Metros">
                     <label>Altura:</label>
-                    <input type="number" min="0">
+                    <input type="number" min="0" id="altura">
                 </div>
 
                 <div class="campo unidade" data-unidade="Kg">
                     <label>Peso:</label>
-                    <input type="number" min="0">
+                    <input type="number" min="0" id="peso">
                 </div>
 
-                <button type="button">CALCULAR</button>
+                <button type="button" id="botao">CALCULAR</button>
 
                 <div class="resultado" id="resultado"></div>
             </form>
