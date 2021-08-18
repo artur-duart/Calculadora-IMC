@@ -43,4 +43,11 @@ function exibirResultado() {
     }
 }
 
+function capturarEnter(event) {
+    if (event.key == "Enter") {
+        exibirResultado()
+    }
+}
+
 document.getElementById("botao").addEventListener('click', exibirResultado)
+document.querySelector('form').addEventListener('keypress', capturarEnter)

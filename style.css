@@ -180,3 +180,11 @@ body footer span {
         padding-right: 70px;
     }
 }
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
