@@ -94,7 +94,7 @@ body main .calculadora form .unidade::before {
     border-radius: 0px 5px 5px 0px;
 }
 
-body main .calculadora form .unidade input{
+body main .calculadora form .unidade input {
     padding-right: 50px;
 }
 
@@ -114,6 +114,16 @@ body main .calculadora form input {
     color: white;
     font-size: 1.1rem;
     font-weight: 300;
+}
+
+body main .calculadora form input::-webkit-outer-spin-button,
+body main .calculadora form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body main .calculadora form input[type=number] {
+    -moz-appearance: textfield;
 }
 
 body main .calculadora form button {
@@ -166,7 +176,7 @@ body footer span {
         width: 80%;
     }
 
-    body main .calculadora form .unidade input{
+    body main .calculadora form .unidade input {
         padding-right: 70px;
     }
 }
