@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<title>Calculadora de IMC</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>IMC</title>
-</head>
+	<body>
+		<header>
+			<h1>CALCULE SEU IMC</h1>
+		</header>
 
-<body>
-    <header>
-        <h1>CALCULE SEU IMC</h1>
-    </header>
+		<main>
+			<section class="categorias">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="2">CATEGORIAS</th>
+						</tr>
+					</thead>
 
-    <main>
-        <section class="categorias">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="2">CATEGORIAS</th>
-                    </tr>
-                </thead>
+					<tbody>
+						<tr>
+							<td>IMC abaixo de 18.5</td>
+							<td>Abaixo do peso</td>
+						</tr>
+						<tr>
+							<td>IMC 18.5 - 24.9</td>
+							<td>Peso ideal</td>
+						</tr>
+						<tr>
+							<td>IMC 25.0 - 29.9</td>
+							<td>Acima do peso</td>
+						</tr>
+						<tr>
+							<td>IMC 30.0 - 34.9</td>
+							<td>Obesidade grau I</td>
+						</tr>
+						<tr>
+							<td>IMC 35.0 - 39.9</td>
+							<td>Obesidade grau II</td>
+						</tr>
+						<tr>
+							<td>IMC maiores que 40</td>
+							<td>Obesidade grau III</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
 
-                <tbody>
-                    <tr>
-                        <td>IMC abaixo de 18.5</td>
-                        <td>Abaixo do peso</td>
-                    </tr>
-                    <tr>
-                        <td>IMC 18.5 - 24.9</td>
-                        <td>Peso ideal</td>
-                    </tr>
-                    <tr>
-                        <td>IMC 25.0 - 29.9</td>
-                        <td>Acima do peso</td>
-                    </tr>
-                    <tr>
-                        <td>IMC 30.0 - 34.9</td>
-                        <td>Obesidade grau I</td>
-                    </tr>
-                    <tr>
-                        <td>IMC 35.0 - 39.9</td>
-                        <td>Obesidade grau II</td>
-                    </tr>
-                    <tr>
-                        <td>IMC maiores que 40</td>
-                        <td>Obesidade grau III</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+			<section class="calculadora">
+				<form>
+					<div class="campo">
+						<label>Nome:</label>
+						<input type="text" id="nome" required />
+					</div>
 
-        <section class="calculadora">
-            <form>
-                <div class="campo">
-                    <label>Nome:</label>
-                    <input type="text" id="nome" required>
-                </div>
+					<div class="campo unidade" data-unidade="Metros">
+						<label>Altura:</label>
+						<input type="number" min="0" id="altura" required />
+					</div>
 
-                <div class="campo unidade" data-unidade="Metros">
-                    <label>Altura:</label>
-                    <input type="number" min="0" id="altura" required>
-                </div>
+					<div class="campo unidade" data-unidade="Kg">
+						<label>Peso:</label>
+						<input type="number" min="0" id="peso" required />
+					</div>
 
-                <div class="campo unidade" data-unidade="Kg">
-                    <label>Peso:</label>
-                    <input type="number" min="0" id="peso" required>
-                </div>
+					<button type="button" id="botao">CALCULAR</button>
 
-                <button type="button" id="botao">CALCULAR</button>
+					<div class="resultado" id="resultado"></div>
+				</form>
+			</section>
+		</main>
 
-                <div class="resultado" id="resultado"></div>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <span>Copyright &copy; 2021 | Artur Duarte</span>
-    </footer>
-</body>
-
+		<footer>
+			<span>Copyright &copy; 2021 | Artur Duarte</span>
+		</footer>
+	</body>
 </html>
