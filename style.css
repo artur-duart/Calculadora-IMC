@@ -12,7 +12,7 @@
 body {
 	background-blend-mode: darken;
 	background-color: #0009;
-	background-image: url(img/background\ -\ IMC.png);
+	background-image: url("./img/background.png");
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: cover;
